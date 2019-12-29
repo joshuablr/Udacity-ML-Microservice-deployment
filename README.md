@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment.svg?style=svg)](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment)
 
+https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment.svg?style=svg
+
 ## Project Overview
 
 In this project, we have given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 

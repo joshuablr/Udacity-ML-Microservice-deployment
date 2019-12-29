@@ -38,10 +38,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run:
-          name: Create virtual env
+          name: Set up env
           command: make setup
       - run:
-          name: Install packages
+          name: Install dependencies and packages
           command: make install
          
       # save build dependencies for next jobs
@@ -56,11 +56,6 @@ jobs:
           command: |
             make lint
 
-      - run:
-          name: run test
-          command: |
-            make test
-            
   #Build docker image and push to dockerhub
   build_docker:
     docker:
@@ -102,4 +97,4 @@ jobs:
       - run:
           name: Push to DockerHub
           command: |
-                docker push jjoshuablr/udacity-housing-prediction:$DTAG
+                docker push joshuablr/udacity-housing-prediction:$DTAG

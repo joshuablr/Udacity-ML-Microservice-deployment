@@ -1,0 +1,8 @@
+
+ubuntu@ip-172-31-34-222:~/repo/Udacity-ML-Microservice-deployment$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}

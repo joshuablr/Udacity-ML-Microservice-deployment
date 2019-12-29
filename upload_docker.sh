@@ -7,7 +7,7 @@
 # Create dockerpath
 # dockerpath=<your docker ID/path>
 dockerpath=udacity-housing-prediction
-tag=v1.0
+dockertag=v1.0
 
 # Step 2:  
 # Authenticate & tag
@@ -19,8 +19,8 @@ source .env
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
 
 #tagging image
-docker tag $dockerpath:latest $DOCKER_USER/$dockerpath:$tag
+docker tag $dockerpath:latest $DOCKER_USER/$dockerpath:$dockertag
 
 # Step 3:
 # Push image to a docker repository
-docker push $DOCKER_USER/$dockerpath:$tag
+docker push $DOCKER_USER/$dockerpath:$dockertag

@@ -12,14 +12,14 @@ workflows:
       - build:
           filters:
             branches:
-              only: master
+              only: master_fork
 
       - build_docker:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: master_fork
 
 jobs:
 

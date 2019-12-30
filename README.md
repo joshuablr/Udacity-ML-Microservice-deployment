@@ -1,6 +1,4 @@
-[![CircleCI](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment.svg?style=svg)](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment)
-
-https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment.svg?style=svg
+[![CircleCI](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment.svg?style=svg&circle-token=6c9390250130447db9609844d004a77cedf0230e)](https://circleci.com/gh/joshuablr/Udacity-ML-Microservice-deployment)
 
 ## Project Overview
 
@@ -26,8 +24,6 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-## Setup the Environment
-
 * Create a virtualenv and activate it:
 ```
 $ make setup
@@ -40,14 +36,9 @@ $ make install
 ```
 $ vi .env
 ```
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
+## Running `app.py`
 ### Deployment options and its Steps
-## Standalone deployment
+#### Standalone deployment
   - To set up the environment
     - `make setup`
   - To install the dependencies 
@@ -56,7 +47,7 @@ $ vi .env
   - `sudo make local`
   - To clean up
     - `ctrl+c`
-## Dockerize and test
+#### Dockerize and test
   - To build an image and run it
     - `./run_docker.sh`
   - To test it 
@@ -64,7 +55,7 @@ $ vi .env
   - To delete the docker deployment
     - `make clean`
 
-## deploy in kubernetes and test
+#### deploy in kubernetes and test
   - Assume that you built an image using `./run_docker.sh`
   - Assume you installed docker desktop with kubernetes enabled 
   - To deploy using script

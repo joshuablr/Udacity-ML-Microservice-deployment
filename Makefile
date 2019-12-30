@@ -21,7 +21,12 @@ install:
 			pip install -r requirements.txt; \
 		deactivate ;\
 	 )
-
+local:
+	@( \
+		. $(VENV)/bin/activate; \
+		python3 app.py; \
+		deactivate ;\
+	 )
 test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
@@ -46,11 +51,13 @@ docker:
 upload: 
 	@sh upload_docker.sh
 
-run:
-	@kubectl apply -f kubernetes-prediction.yaml
+kubernetes:
+	@sh run_kubernetes.sh
+
+clean-kubernetes:
+	@kubectl delete deployment udacity-prediction
 
 clean: 
 	@docker rm -f udacity-housing-prediction
-
 
 all: setup install lint docker test upload

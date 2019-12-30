@@ -26,18 +26,53 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+## Setup the Environment
 
+* Create a virtualenv and activate it:
+```
+$ make setup
+```
+* Install the necessary dependencies:
+```
+$ make install
+```
+* Fill and set env variables(docker hub user name and access token) up:
+```
+$ vi .env
+```
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
+### Deployment options and its Steps
+## Standalone deployment
+  - To set up the environment
+    - `make setup`
+  - To install the dependencies 
+    - `make install`
+  - To run the app
+  - `sudo make local`
+  - To clean up
+    - `ctrl+c`
+## Dockerize and test
+  - To build an image and run it
+    - `./run_docker.sh`
+  - To test it 
+    - `./make_prediction.sh`
+  - To delete the docker deployment
+    - `make clean`
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+## deploy in kubernetes and test
+  - Assume that you built an image using `./run_docker.sh`
+  - Assume you installed docker desktop with kubernetes enabled 
+  - To deploy using script
+    - `./run_kubernetes.sh`
+  - To deploy using makefile
+    - `make kubernetes`
+  - To test it 
+    - `./make_prediction.sh`
+  - To delete the deployment
+    - `make clean-kubernetes`
+
